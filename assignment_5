@@ -1,0 +1,55 @@
+# Question 1 
+def find_var(l,var):
+    # Start result
+    result = 0
+
+    # Check if list is empty
+    if len(l) == 0:
+        return
+
+    # Check if variable is in list
+    if var not in l:
+        # If variable not in list return 'var doesn't exist in list'.
+        return "var doesn't exist in list"
+
+        # Counting appearances of var in list & assigning returned value to list.
+        result = l.count(var)
+        return result 
+
+# Question 2
+def testing_1():
+    # Start lists
+    L1 = ['heya', 2, 3, 4, 4, 3, 3, 3, 6, 8, 13, 0]
+    L2 = ['cookie', 7, 8, 1, 7, 5, 9, 8, 2]
+    L3 = ['nice', 4, 5, 6, 7, 8, 9, 4, 14, 4]
+
+    # Call find_var function on each list and print value.
+    print (find_var(L1, 4))
+    print (find_var(L2, 6))
+    print (find_var(L3, 7))
+
+# Question 3
+def connect (l, c):
+    # check is list is empty
+    if len(l) == 0:
+        return
+
+    # reverse order of strings in list
+    l = l[::-1]
+
+    # returm words with character 'c'
+    return c.join(l)
+
+# Question 3
+def testing_2():
+    L1 = ['coffee', 'creamer', 'milk', 'caramel']
+    L2 = ['apples', 'oranges', 'bananas', 'pears']
+    L3 = ['amethyst', 'pyrite', 'selenite', 'carnelian']
+
+    print (connect(L1, " & "))
+    print (connect(L2, " & "))
+    print (connect(L3, " & "))
+
+# print results or tests
+testing_1()
+testing_2()
